@@ -1,0 +1,119 @@
+﻿@page "/"
+
+<PageTitle>Todo App</PageTitle>
+
+<div class="container">
+
+    <h1>📌 Todo Dashboard</h1>
+
+    <p class="summary">
+        Total: <b>@todos.Count</b> |
+        Remaining: <b>@RemainingCount</b> |
+        Completed: <b>@todos.Count(t => t.IsDone)</b>
+    </p>
+
+    <hr />
+
+    <!-- Add Todo Section -->
+    <div class="add-section">
+        <input placeholder="Enter new task..." @bind="newTodo" />
+        <button @onclick="AddTodo">➕ Add</button>
+    </div>
+
+    <hr />
+
+    <!-- Todo List -->
+    <ul class="todo-list">
+        @foreach (var todo in todos)
+        {
+            <li class="todo-item">
+
+                <input type="checkbox" @bind="todo.IsDone" />
+
+                <input class="title-input" @bind="todo.Title" />
+
+                <span class="status">
+                    @(todo.IsDone ? "✔ Done" : "⏳ Pending")
+                </span>
+
+                <button class="delete-btn" @onclick="() => DeleteTodo(todo)">
+                    🗑 Delete
+                </button>
+
+            </li>
+        }
+    </ul>
+
+    <hr />
+
+    <!-- Action Buttons -->
+    <div class="actions">
+        <button @onclick="ClearCompleted">Clear Completed</button>
+        <button @onclick="MarkAllDone">Mark All Done</button>
+        <button @onclick="ResetDemo">Reset Demo Data</button>
+    </div>
+
+</div>
+
+@code {
+
+    private List<TodoItem> todos = new()
+    {
+        new TodoItem { Title = "Learn Blazor Basics", IsDone = true },
+        new TodoItem { Title = "Build Todo UI", IsDone = false },
+        new TodoItem { Title = "Add CRUD Features", IsDone = false },
+        new TodoItem { Title = "Push to GitHub", IsDone = false }
+    };
+
+    private string? newTodo;
+
+    private int RemainingCount =>
+        todos.Count(t => !t.IsDone);
+
+    private void AddTodo()
+    {
+        if (!string.IsNullOrWhiteSpace(newTodo))
+        {
+            todos.Add(new TodoItem
+            {
+                Title = newTodo,
+                IsDone = false
+            });
+
+            newTodo = string.Empty;
+        }
+    }
+
+    private void DeleteTodo(TodoItem todo)
+    {
+        todos.Remove(todo);
+    }
+
+    private void ClearCompleted()
+    {
+        todos = todos.Where(t => !t.IsDone).ToList();
+    }
+
+    private void MarkAllDone()
+    {
+        foreach (var t in todos)
+            t.IsDone = true;
+    }
+
+    private void ResetDemo()
+    {
+        todos = new List<TodoItem>
+        {
+            new TodoItem { Title = "Learn Blazor Basics", IsDone = true },
+            new TodoItem { Title = "Build Todo UI", IsDone = false },
+            new TodoItem { Title = "Add CRUD Features", IsDone = false },
+            new TodoItem { Title = "Push to GitHub", IsDone = false }
+        };
+    }
+
+    public class TodoItem
+    {
+        public string Title { get; set; } = string.Empty;
+        public bool IsDone { get; set; }
+    }
+}

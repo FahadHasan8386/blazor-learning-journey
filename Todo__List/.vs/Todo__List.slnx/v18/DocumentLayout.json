@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Repository\\blazor-learning-journey\\Todo__List\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E30F8196-DAC2-434E-87D5-1393E77C04E4}|Todo__List\\Todo__List.csproj|e:\\repository\\blazor-learning-journey\\todo__list\\todo__list\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E30F8196-DAC2-434E-87D5-1393E77C04E4}|Todo__List\\Todo__List.csproj|solutionrelative:todo__list\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Home.razor",
+              "DocumentMoniker": "E:\\Repository\\blazor-learning-journey\\Todo__List\\Todo__List\\Pages\\Home.razor",
+              "RelativeDocumentMoniker": "Todo__List\\Pages\\Home.razor",
+              "ToolTip": "E:\\Repository\\blazor-learning-journey\\Todo__List\\Todo__List\\Pages\\Home.razor",
+              "RelativeToolTip": "Todo__List\\Pages\\Home.razor",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAAB4AAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-05T04:18:17.468Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
