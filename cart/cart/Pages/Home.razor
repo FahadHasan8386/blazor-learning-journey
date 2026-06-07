@@ -1,0 +1,201 @@
+﻿@page "/"
+
+<PageTitle>Shopping Cart</PageTitle>
+
+<div class="container">
+	<h1> My Cart</h1>
+
+	@foreach(var item in cartItems)
+	{
+		<div class="cart-item">
+
+			<img src="" alt="@item.Name"/>
+
+			<div class="details">
+				<h4>@item.Name</h4>
+				<p>@item.Price</p>
+			</div>
+
+			<div class="qty-section">
+				<button @onclick="() => DecreaseQty(item)">-</button>
+				<span>@item.Quantity</span>
+				<button @onclick="() => IncreaseQty(item)">+</button>
+			</div>
+
+			<div class="total-price">
+				৳@(item.Price * item.Quantity)
+			</div>
+
+			<button class="remove-btn"
+					@onclick="() => RemoveItem(item)">
+				🗑
+			</button>
+		</div>
+	}
+
+	<hr />
+	<div class="summary">
+		<h3>Order Summary</h3>
+
+		<p>Subtotal: ৳@Subtotal</p>
+		<p>Delivary: ৳@DeliveryCharge</p>
+
+		<h2>Total: ৳@(Subtotal + DeliveryCharge)</h2>
+
+        <button class="checkout-btn">
+            Proceed To Checkout
+        </button>
+	</div>
+
+</div>
+
+
+@code
+{
+	private List<CartItem> cartItems = new()
+	{
+		new()
+		{
+			Id = 1,
+			Name = "Wireless Mouse",
+			Price = 850,
+			Quantity = 2,
+			ImageUrl = "https://picsum.photos/100?1"
+		},
+
+		new()
+		{
+			Id = 2,
+			Name = "Mechanical Keyboard",
+			Price = 3200,
+			Quantity = 1,
+			ImageUrl = "https://picsum.photos/100?2"
+		},
+
+		new()
+		{
+			Id = 3,
+			Name = "USB-C Hub",
+			Price = 1200,
+			Quantity = 1,
+			ImageUrl = "https://picsum.photos/100?3"
+		}
+	};
+
+	private decimal Subtotal => cartItems.Sum(x => x.Price * x.Quantity);
+
+	private decimal DeliveryCharge => 80;
+
+	private void IncreaseQty(CartItem item)
+	{
+		item.Quantity++;
+	}
+	private void DecreaseQty(CartItem item)
+	{
+		if(item.Quantity > 1)
+			item.Quantity--;
+	}
+
+	private void RemoveItem(CartItem item)
+	{
+		cartItems.Remove(item);
+	}
+
+	public class CartItem
+	{
+		public int Id { get; set; }
+		public string Name { get; set; } = string.Empty;
+		public decimal Price { get; set; }
+		public int Quantity { get; set; }
+		public string ImageUrl { get; set; } = "";
+	}
+}
+<style>
+	.container {
+		max-width: 1200px;
+		margin: 40px auto;
+		padding: 20px;
+	}
+
+	.cart-item {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 20px;
+		padding: 20px;
+		margin-bottom: 15px;
+		background: white;
+		border-radius: 12px;
+		box-shadow: 0 3px 12px rgba(0,0,0,.08);
+	}
+
+		.cart-item img {
+			width: 100px;
+			height: 100px;
+			object-fit: cover;
+			border-radius: 10px;
+		}
+
+	.product-info {
+		flex: 1;
+	}
+
+		.product-info h4 {
+			margin: 0;
+			font-size: 20px;
+		}
+
+		.product-info p {
+			margin-top: 8px;
+			color: gray;
+		}
+
+	.qty-box {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+	}
+
+		.qty-box button {
+			width: 40px;
+			height: 40px;
+			font-size: 18px;
+		}
+
+	.price {
+		width: 120px;
+		text-align: center;
+		font-weight: bold;
+		font-size: 20px;
+	}
+
+	.remove-btn {
+		background: red;
+		color: white;
+		border: none;
+		width: 45px;
+		height: 45px;
+		border-radius: 8px;
+		cursor: pointer;
+	}
+
+	.summary-card {
+		margin-top: 30px;
+		padding: 25px;
+		background: white;
+		border-radius: 12px;
+		box-shadow: 0 3px 12px rgba(0,0,0,.08);
+	}
+
+	.checkout-btn {
+		width: 100%;
+		margin-top: 15px;
+		padding: 15px;
+		background: #198754;
+		color: white;
+		border: none;
+		border-radius: 8px;
+		font-size: 18px;
+	}
+
+</style>

@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "E:\\Repository\\blazor-learning-journey\\Todo__List\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CB5F7709-8176-4345-26F5-E528BDC792D2}|Todo__List\\Todo__List.csproj|e:\\repository\\blazor-learning-journey\\todo__list\\todo__list\\wwwroot\\css\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{CB5F7709-8176-4345-26F5-E528BDC792D2}|Todo__List\\Todo__List.csproj|solutionrelative:todo__list\\wwwroot\\css\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CB5F7709-8176-4345-26F5-E528BDC792D2}|Todo__List\\Todo__List.csproj|e:\\repository\\blazor-learning-journey\\todo__list\\todo__list\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{CB5F7709-8176-4345-26F5-E528BDC792D2}|Todo__List\\Todo__List.csproj|solutionrelative:todo__list\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB5F7709-8176-4345-26F5-E528BDC792D2}|Todo__List\\Todo__List.csproj|e:\\repository\\blazor-learning-journey\\todo__list\\todo__list\\wwwroot\\css\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{CB5F7709-8176-4345-26F5-E528BDC792D2}|Todo__List\\Todo__List.csproj|solutionrelative:todo__list\\wwwroot\\css\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,26 +26,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "app.css",
               "DocumentMoniker": "E:\\Repository\\blazor-learning-journey\\Todo__List\\Todo__List\\wwwroot\\css\\app.css",
               "RelativeDocumentMoniker": "Todo__List\\wwwroot\\css\\app.css",
               "ToolTip": "E:\\Repository\\blazor-learning-journey\\Todo__List\\Todo__List\\wwwroot\\css\\app.css",
               "RelativeToolTip": "Todo__List\\wwwroot\\css\\app.css",
-              "ViewState": "AgIAAHsAAAAAAAAAAAAAAMMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAMYAAAAAAAAAAAAAAMMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2026-06-06T02:18:58.011Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Home.razor",
               "DocumentMoniker": "E:\\Repository\\blazor-learning-journey\\Todo__List\\Todo__List\\Pages\\Home.razor",
               "RelativeDocumentMoniker": "Todo__List\\Pages\\Home.razor",
               "ToolTip": "E:\\Repository\\blazor-learning-journey\\Todo__List\\Todo__List\\Pages\\Home.razor",
               "RelativeToolTip": "Todo__List\\Pages\\Home.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAmwFQAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-06-05T04:18:17.468Z",
               "EditorCaption": ""
